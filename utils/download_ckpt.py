@@ -25,7 +25,6 @@ models = {
     # 'gpt2': 'https://cdn.huggingface.co/gpt2-pytorch_model.bin',
     # 'bert-base-uncased': 'https://cdn.huggingface.co/bert-base-uncased-pytorch_model.bin'
     # 'pangu_2_6B': 'https://cdn.huggingface.co/pangu-2_6B-pytorch_model.bin'
-    'pangu_2_6B': 'https://huggingface.co/imone/pangu_2_6B/blob/main/pytorch_model.bin'
 }
 
 # 定义多线程函数
