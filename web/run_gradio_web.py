@@ -1,9 +1,15 @@
 import gradio as gr
 
-
 from pangu_infernce import alpha_inference, alpha_evolution_inference, alpha_mPangu_inference
 
+
 def run_gradio(infer_model='alpha'):
+    '''
+    run_gradio
+    :param infer_model:
+    :return:
+    '''
+    global pangu_web
     if infer_model == 'alpha':
         pangu_web = gr.Interface(fn=alpha_inference, inputs="text", outputs="text")
     elif infer_model == 'evolution':
