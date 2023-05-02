@@ -1,5 +1,8 @@
 import gradio as gr
 
+import sys
+sys.path.append('../pangu-ax/')
+
 from infernce import alpha_inference, alpha_evolution_inference, alpha_mPangu_inference
 
 

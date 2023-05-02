@@ -5,7 +5,7 @@ from pcl_pangu.model import alpha, evolution, mPangu
 
 
 def pangu_inference_chat(message, chat_history,
-                         model='2B6', load='ckpts/pretrained/onnx_int8_pangu_alpha_2b6/',
+                         model='2B6', load='../ckpts/pretrained/onnx_int8_pangu_alpha_2b6',
                          backend='onnx-cpu', gmax_tokens=800, output=None):
     '''
     pangu_inference_chat

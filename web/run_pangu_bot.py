@@ -1,5 +1,8 @@
 import gradio as gr
 
+import sys
+sys.path.append('../pangu-ax/')
+
 from chatbot.gangu_chat import pangu_inference_chat
 
 with gr.Blocks() as chat:

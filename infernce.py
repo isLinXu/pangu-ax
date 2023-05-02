@@ -2,7 +2,7 @@ from pcl_pangu.context import set_context
 from pcl_pangu.model import alpha, evolution, mPangu
 
 
-def alpha_inference(input, input_file=None, model='2B6', load='ckpts/pretrained/onnx_int8_pangu_alpha_2b6/',
+def alpha_inference(input, input_file=None, model='2B6', load='../ckpts/pretrained/onnx_int8_pangu_alpha_2b6',
                     backend='onnx-cpu', gmax_tokens=800, output=None, top_k=2, top_p=0.9, batch_size=8):
     '''
     alpha_inference
@@ -28,7 +28,7 @@ def alpha_inference(input, input_file=None, model='2B6', load='ckpts/pretrained/
                            input_file=input_file, generate_max_tokens=gmax_tokens, output_file=output)
 
 
-def alpha_evolution_inference(input,  input_file=None, model='2B6', load='ckpts/pretrained/onnx_int8_pangu_evolution_2b6/',
+def alpha_evolution_inference(input,  input_file=None, model='2B6', load='./ckpts/pretrained/onnx_int8_pangu_evolution_2b6/',
                               backend='onnx-cpu', gmax_tokens=800, output=None, top_k=1, top_p=0.9,batch_size=8):
     '''
     alpha_inference
@@ -50,7 +50,7 @@ def alpha_evolution_inference(input,  input_file=None, model='2B6', load='ckpts/
                            input_file=input_file, generate_max_tokens=gmax_tokens, output_file=output)
 
 
-def alpha_mPangu_inference(input, model='2B6', load='ckpts/pretrained/onnx_int8_pangu_alpha_2b6/',
+def alpha_mPangu_inference(input, model='2B6', load='./ckpts/pretrained/onnx_int8_pangu_alpha_2b6/',
                            backend='mindspore', gmax_tokens=800, output=None):
     '''
     alpha_mPangu_inference
