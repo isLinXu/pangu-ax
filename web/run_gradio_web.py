@@ -1,6 +1,6 @@
 import gradio as gr
 
-from pangu_infernce import alpha_inference, alpha_evolution_inference, alpha_mPangu_inference
+from infernce import alpha_inference, alpha_evolution_inference, alpha_mPangu_inference
 
 
 def run_gradio(infer_model='alpha'):
