@@ -58,8 +58,9 @@ def fine_tune(config):
 def inference(config,top_k=1,top_p=0.9,input=None,input_file=None,
               generate_max_tokens=128, output_file=None,oneCardInference=True):
 
+    global output_samples, raw_text
     backend_context = check_context()
-    result_output = None
+    result_output = ''
     assert generate_max_tokens > 0 and generate_max_tokens <= 800, "> generate_max_tokens always in (0, 800]"
     print('--------------------------- inference config --------------------------')
     print("> Base Model: [alpha]")
@@ -120,6 +121,7 @@ def inference(config,top_k=1,top_p=0.9,input=None,input_file=None,
             print('Input is:', raw_text)
             print('Output is:', output_samples[len(raw_text):], flush=True)
             print()
+
 
         if input_file is not None:
             raw_texts = open(input_file, 'r').read().split('\n\n')

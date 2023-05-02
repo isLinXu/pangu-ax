@@ -52,7 +52,9 @@ def inference(config,top_k=1,top_p=0.9,input=None,input_file=None,output_file=No
               generate_max_tokens=128,oneCardInference=True):
 
     backend_context = check_context()
-
+    global output_samples, raw_text
+    backend_context = check_context()
+    result_output = None
     assert generate_max_tokens > 0 and generate_max_tokens<=800, "> generate_max_tokens always in (0, 800]"
     print('--------------------------- inference config --------------------------')
     print("> Base Model: [evolution]")
@@ -121,7 +123,10 @@ def inference(config,top_k=1,top_p=0.9,input=None,input_file=None,output_file=No
 
     else:
         print("ERROR: wrong backend.")
-        return 1
+        # return 1
+    if output_samples[len(raw_text):] is not None:
+        result_output = output_samples[len(raw_text):]
+    return result_output
 
 
 def run_pt(script_args, py_script, **kwargs):
