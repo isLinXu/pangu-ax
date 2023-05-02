@@ -130,6 +130,22 @@ python pangu_infernce.py -p "请简单介绍一下盘古" -m "2B6" -c "ckpts/pre
 
 #### 在线推理
 
+api_key是用于获取型Saas服务的凭证，用户在使用在线推理api前请先申请api_key，获取方法参见[[api_key获取指南](https://openi.pcl.ac.cn/PCL-Platform.Intelligence/pcl_pangu/src/branch/master/docs/api_key获取指南.doc)]。目前api_key暂定为免费申请，后续可能会调整。
+
+##### 获取模型信息
+
+如果不了解我们目前提供Saas服务，可以通过以下接口获取。
+
+```python
+from pcl_pangu.online import ModelInfo
+
+# 获取所有在线模型的基本信息
+models = ModelInfo.model_list()
+
+# 获取指定在线模型的基本信息
+model = ModelInfo.model_info(model="pangu-alpha-13B-md")
+```
+
 ```shell
 python pangu_infernce_online.py
 ```
@@ -144,13 +160,26 @@ python pangu_infernce_online.py
 python web/run_gradio_web.py
 ```
 
-
+![grado_web1](./figure/grado_web1.png)
 
 #### chatbot对话机器人
 
 ```shell
 python web/run_pangu_bot.py
 ```
+
+![grado_web2](./figure/grado_web2.png)
+
+
+### 模型训练
+
+- datasets：https://openi.pcl.ac.cn/PCL-Platform.Intelligence/pcl_pangu/datasets
+
+
+
+### 模型微调
+
+
 
 
 
