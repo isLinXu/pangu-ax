@@ -134,7 +134,7 @@ api_key是用于获取型Saas服务的凭证，用户在使用在线推理api前
 
 ##### 获取模型信息
 
-如果不了解我们目前提供Saas服务，可以通过以下接口获取。
+目前官方团队提供Saas服务，可以通过以下接口获取。
 
 ```python
 from pcl_pangu.online import ModelInfo
@@ -150,7 +150,7 @@ model = ModelInfo.model_info(model="pangu-alpha-13B-md")
 python pangu_infernce_online.py
 ```
 
-![infer_online](/Users/gatilin/PycharmProjects/pangu-ax/figure/infer_online.png)
+![infer_online](./figure/infer_online.png)
 
 #### gradio web启动
 
