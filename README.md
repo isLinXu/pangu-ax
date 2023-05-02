@@ -160,7 +160,7 @@ python pangu_infernce_online.py
 python web/run_gradio_web.py
 ```
 
-![grado_web1](./figure/grado_web1.png)
+![grado_web1](./figure/gradio_web1.png)
 
 #### chatbot对话机器人
 
@@ -168,7 +168,7 @@ python web/run_gradio_web.py
 python web/run_pangu_bot.py
 ```
 
-![grado_web2](./figure/grado_web2.png)
+![grado_web2](./figure/gradio_web2.png)
 
 
 ### 模型训练
