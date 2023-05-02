@@ -27,10 +27,10 @@
 
 
 
-### 配置ckpts
+### ckpts
 
 ```
-sudo ln -s /Users/gatilin/Pan/ckpts/ ckpts
+sudo ln -s /Users/gatilin/Pan/ckpts/ ckpts/pretrained
 ```
 
 

@@ -5,7 +5,7 @@ import argparse
 
 
 class PanguInference():
-    def __init__(self, input, model='2B6', load='ckpts/onnx_int8_pangu_alpha_2b6/', backend='onnx-cpu', batch_size=8):
+    def __init__(self, input, model='2B6', load='ckpts/pretrained/onnx_int8_pangu_alpha_2b6/', backend='onnx-cpu', batch_size=8):
         '''
         PanguInference
         :param model:
@@ -96,7 +96,7 @@ if __name__ == '__main__':
     parser.add_argument('--prompt', '-p', default="西红柿炒蛋怎么做？",
                         help='The prompt to generate text from')
     parser.add_argument('--model', '-m', default='2B6', help='The GPT-3 model to use')
-    parser.add_argument('--ckpt', '-c', default='ckpts/onnx_int8_pangu_alpha_2b6/',
+    parser.add_argument('--ckpt', '-c', default='ckpts/pretrained/onnx_int8_pangu_alpha_2b6/',
                         help='The checkpoint to use')
     parser.add_argument('--backend', '-b', default='onnx-cpu', help='The backend to use')
     parser.add_argument('--batch_size', '-k', default=8, help='batch size')
